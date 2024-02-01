@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>High Quality Sustainable Coffee Delivered to Your Door | Hipstirred</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Rancho&display=auto" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<a href="index.html"><img src="img/logo.svg" class="logo" alt="Hipstirred"></a>
+		<nav>
+			<ul>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="signup.html" class="button">Sign Up</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="hero">
+		<h1>Curated Coffee</h1>
+		<p class="tagline">A monthly subscription to sustainable coffees</p>
+	</div>
+
+	<main>
+		<h2>What Makes Hipstirred Coffee Great?</h2>
+
+		<section>
+			<div class="text">
+				<h3>High Quality</h3>
+				<p>Get top notch coffee that’s freshly&nbsp;roasted</p>
+			</div>
+			<img src="img/quality.jpg" alt="">
+		</section>
+		<section>
+			<div class="text">
+				<h3>Convenient</h3>
+				<p>Amazing coffee delivered straight to your&nbsp;door</p>
+			</div>
+			<img src="img/convenient.jpg" alt="">
+		</section>
+		<section>
+			<div class="text">
+				<h3>Affordable</h3>
+				<p>High-quality doesn’t have to have a high cost. We cut out the middleman to deliver great coffee at a great&nbsp;price.</p>
+			</div>
+			<img src="img/affordable.jpg" alt="">
+		</section>
+		<section>
+			<div class="text">
+				<h3>Sustainable</h3>
+				<p>We work with coffee producers who practice eco-friendly, sustainable&nbsp;farming</p>
+			</div>
+			<img src="img/sustainable.jpg" alt="">
+		</section>
+		
+		<div class="call-to-action">
+			<h3>Get Started Today</h3>
+			<a href="signup.html" class="button">Sign Up</a>
+		</div>
+	</main>
+
+
+	<footer>
+			<h6>Follow Us</h6>
+			<div class="social">
+				<a href="https://twitter.com">
+					<img class="twitter" src="img/icon-twitter.svg" width="42" alt="Twitter">
+				</a>
+				<a href="https://www.facebook.com">
+					<img class="facebook" src="img/icon-facebook.svg" width="35" alt="Facebook">
+				</a>
+			</div>
+			<p class="copyright">© Hipstirred LLC</p>
+	</footer>
+
+	<script src="js/gsap.min.js"></script>
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script>
+		let sectionImg = document.querySelectorAll( 'section img' );
+		let sectionText = document.querySelectorAll( 'section .text' );
+
+		for(let i=0; i < sectionImg.length; i++) {
+			let movement = 100 // odd rows
+			if( i % 2 == 0 ) {
+				movement = -movement; // even rows
+			}
+
+			gsap.from(sectionImg[i], {
+				scrollTrigger: {
+					trigger: sectionImg[i],
+					//markers: true,
+					scrub: 1,
+					start: 'top 85%',
+					end: 'bottom 80%'
+				}, x:movement, opacity: 0}
+			)
+			gsap.from(sectionText[i], {
+				scrollTrigger: {
+					trigger: sectionText[i],
+					//markers: true,
+					scrub: 1,
+					start: 'top 85%',
+					end: 'bottom 80%'
+				}, x:-movement, opacity: 0}
+			)
+		}
+
+		
+	</script>
+</body>
+</html>

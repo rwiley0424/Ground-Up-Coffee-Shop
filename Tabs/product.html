@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Us | Hipstirred</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Rancho&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="js/tabby/css/tabby-ui.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="about">
+	<div class="wrapper">
+		<header>
+			<a href="index.html"><img src="img/hipstirred-logo.svg" class="logo" height="36" width="105" alt="Hipstirred"></a>
+			<nav>
+				<ul>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="signup.html" class="button">Sign Up</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="hero">
+			<h1>Premium Coffee</h1>
+			<h2>Delivered to Your Door</h2>
+		</div>
+		<main>
+			<h3>What Makes Hipstirred Coffee Special?</h3>
+			<p>At Hipstirred, our team of curators analyze your roast preferences and brewing tastes to hand-pick new beans you will love. Get your Chemex ready for the amazing coffee headed your way.</p>
+
+			<ul data-tabs>
+				<li><a data-tabby-default href="#overview">Overview</a></li>
+				<li><a href="#reviews">Reviews</a></li>
+				<li><a href="#questions">Q & A</a></li>
+			</ul>
+
+			<!-- Overview Content -->
+			<div id="overview" class="tabbed-content">
+				<p>Our goal is to make brewing exotic coffee fun, effortless and enlightening. We believe that if you feel confident about where your coffee beans come from, it affects your life in positive ways. From sharing a cozy moment with loved ones to finding the energy to get stuff done, caffeine has a way of boosting everything and everyone around you.</p>
+
+				<h4>How It Works</h4>
+				<p>Finding a variety of high-quality and sustainably sourced coffees is challenging, but we’re changing that. We locate and test a wide variety of coffee and then send the best to you every month, or you can choose specific coffees in our curated collection.</p>
+
+				<h4>Experiment or Get Your Favorites</h4>
+				<p>Like trying different coffees, but also have some favorites you always like to have on hand? We understand! You’re in complete control of what you get. You can choose from specific coffees and whether you want us to send you the current pick of the month. Which coffee will be your favorite?</p>
+			</div>
+
+			<!-- Review Content -->
+			<div id="reviews" class="tabbed-content">
+				<blockquote>
+					<p class="review">I can’t fully express how happy I am with Hipstirred Coffee. I would also like to say thank you to all your staff. I’d be lost without Hipstirred Coffee. Thanks guys, keep up the good work!</p>
+					<p class="reviewer">Laurent O.</p>
+				</blockquote>
+				<blockquote>
+					<p class="review">Hipstirred Coffee is worth much more than I paid. It’s really wonderful. Their coffee is both affordable and high quality. Nice work on your Hipstirred Coffee.</p>
+					<p class="reviewer">Scarlet R.</p>
+				</blockquote>
+				<blockquote>
+					<p class="review">Thanks for the great service. I will refer everyone I know.</p>
+					<p class="reviewer">Bay L.</p>
+				</blockquote>
+				<blockquote>
+					<p class="review">Fantastic, I’m totally blown away by Hipstirred Coffee.</p>
+					<p class="reviewer">Jack F.</p>
+				</blockquote>
+			</div>
+
+			<!-- Q & A Content -->
+			<div id="questions" class="tabbed-content">
+				<p class="question">How fresh will the coffee be?</p>
+				<p class="answer">We get coffee shipped straight from the coffee producers to us. We then roast the beans in small batches and quickly ship them to you for the freshest possible product.</p>
+
+				<p class="question">Where do you source your coffee from?</p>
+				<p class="answer">Each coffee is sourced from different regions of the world. We find coffee producers that maintain environmentally friendly practiced.</p>
+
+				<p class="question">How can you offer such high quality coffee at such low prices?</p>
+				<p class="answer">By cutting out the middleman and shipping direct to you, not only do you get an amazingly fresh product... you also save money.</p>
+			</div>
+
+		</main>
+	</div>
+	
+	<script src="js/tabby/js/tabby.min.js"></script>
+	<script>
+		var tabs = new Tabby('[data-tabs]');
+	</script>
+</body>
+</html>

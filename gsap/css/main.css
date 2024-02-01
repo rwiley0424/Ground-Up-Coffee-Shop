@@ -1,0 +1,214 @@
+:root {
+	font-size: 1.1875rem;
+	--primary-color: #520;
+	--heading-font: 'Rancho', sans-serif;
+	--text-font: 'Abel', sans-serif;
+	--primary-max-width: 1000px;
+	--primary-border-radius: 10px;
+	--primary-box-shadow: 0 10px 40px rgba(0,0,0, .7);
+	--section-spacing-large: 200px;
+	--section-spacing-small: 100px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; vertical-align: middle; border: 0; }
+
+html, body {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: var(--text-font);
+	color: #555;
+	margin: 0;
+}
+h1 {
+	font-family: var(--heading-font);
+	font-size: 16vw;
+	line-height: 1;
+	font-weight: 400;
+	margin: 0;
+}
+h2 {
+	font-size: 1.8rem;
+	line-height: 1.1;
+	text-align: center;
+	color: var(--primary-color);
+	margin-bottom: 0;
+}
+h3 {
+	color: var(--primary-color);
+	font-family: var(--heading-font);
+	font-size: 3rem;
+	line-height: 0.9;
+	margin: 0;
+	margin-bottom: .2em;
+}
+h6 {
+	color: var(--primary-color);
+	font-family: var(--heading-font);
+	font-size: 2rem;
+	margin: 0;
+}
+p {
+	margin-top: 0;
+}
+.tagline {
+	margin: 0;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+}
+header {
+	padding: 20px;
+	display: flex;
+	text-align: center;
+}
+img.logo {
+	width: 105px;
+}
+nav {
+	flex-grow: 1;
+	text-align: right;
+	margin-left: auto;
+	font-size: .9rem;
+	text-transform: uppercase;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	display: inline-block;
+	margin-left: 10px;
+}
+nav a {
+	color: #555;
+	text-decoration: none;
+}
+.button {
+	background-color: #8842c2;
+	color: #fff;
+	padding: .3em .5em;
+	border-radius: calc(var(--primary-border-radius)/2);
+	text-transform: uppercase;
+	display: inline-block;
+	text-decoration: none;
+}
+.hero {
+	min-height: 65vh;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	background-image: url(../img/hero.jpg);
+	background-position: center;
+	background-size: cover;
+	margin-bottom: var(--section-spacing-small);
+	padding: 10%;
+	color: #fff;
+	background-color: var(--primary-color);
+	background-position: center 75%;
+	background-size: cover;
+}
+main {
+	padding: 0 30px;
+}
+section img {
+	border-radius: var(--primary-border-radius);
+	box-shadow: var(--primary-box-shadow);
+	min-width: 0; /* ensures images scale down in the flex layout */ 
+}
+.call-to-action {
+	text-align: center;
+	max-width: var(--primary-max-width);
+	margin: auto;
+	padding: 10%;
+	background-color: var(--primary-color);
+	background-position: center;
+	background-size: cover;
+	background-image: url(../img/coffee-background.jpg);
+	border-radius: var(--primary-border-radius);
+	box-shadow: var(--primary-box-shadow);
+	margin: var(--section-spacing-small) auto;
+}
+.call-to-action h3 {
+	color: white;
+}
+.call-to-action .button {
+	font-size: 1.4rem;
+}
+footer {
+	background-color: #e9d8c8;
+	padding: 50px;
+	text-align: center;
+}
+footer a {
+	text-decoration: none;
+}
+footer .copyright {
+	margin: 0;
+	font-size: .9rem;
+	color: var(--primary-color);
+	opacity: .8;
+	margin-top: 50px;
+}
+footer .social a {
+	padding: 10px;
+	display: inline-block;
+}
+footer .social .twitter {
+	vertical-align: -10%;
+}
+footer .social .facebook {
+	vertical-align: 0;
+}
+
+@media (max-width: 599px) {
+	section {
+		margin: var(--section-spacing-small) auto;
+	}
+}
+@media (min-width: 600px) {
+	h1 {
+		font-size: 10vw;
+	}
+	h2 {
+		font-size: 2.2rem;
+	}
+	h3 {
+		font-size: 4rem;
+	}
+	.hero {
+		margin-bottom: var(--section-spacing-large);
+	}
+	section {
+		max-width: var(--primary-max-width);
+		display: flex;
+		margin: var(--section-spacing-large) auto;
+	}
+	section:first-of-type {
+		margin-top: calc(var(--section-spacing-large)*.7);
+	}
+	section .text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	section .text p {
+		margin: 0;
+	}
+	section:nth-of-type(odd) {
+		flex-direction: row-reverse;
+	}
+	section:nth-of-type(even) {
+		text-align: right;
+	}
+	section > *  {
+		flex-basis: 50%;
+		margin: 20px;
+	}
+	.call-to-action {
+		margin: var(--section-spacing-large) auto;
+	}
+}
